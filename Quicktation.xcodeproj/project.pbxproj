@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB9F479429ED3C0300838D62 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F479329ED3C0300838D62 /* data.swift */; };
+		FBBBD9F529DDB93C0008A5B3 /* QuicktationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBD9F429DDB93C0008A5B3 /* QuicktationApp.swift */; };
+		FBBBD9F929DDB93D0008A5B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBBD9F829DDB93D0008A5B3 /* Assets.xcassets */; };
+		FBBBD9FC29DDB93D0008A5B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBBD9FB29DDB93D0008A5B3 /* Preview Assets.xcassets */; };
+		FBBBDA0629DDB93D0008A5B3 /* QuicktationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBDA0529DDB93D0008A5B3 /* QuicktationTests.swift */; };
+		FBBBDA1029DDB93D0008A5B3 /* QuicktationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBDA0F29DDB93D0008A5B3 /* QuicktationUITests.swift */; };
+		FBBBDA1229DDB93D0008A5B3 /* QuicktationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBDA1129DDB93D0008A5B3 /* QuicktationUITestsLaunchTests.swift */; };
+		FBBBDA2629DDBEB90008A5B3 /* Aromatron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBBBDA2529DDBEB90008A5B3 /* Aromatron-Regular.ttf */; };
+		FBBBDA2B29DDE7530008A5B3 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBDA2A29DDE7530008A5B3 /* RegisterPage.swift */; };
+		FBFD28DA29EF44E40097091E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FBFD28D929EF44E40097091E /* Alamofire */; };
+		FBFD28DE29EF4EBF0097091E /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFD28DD29EF4EBF0097091E /* MainPage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FBBBDA0229DDB93D0008A5B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBBBD9E929DDB93C0008A5B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBBBD9F029DDB93C0008A5B3;
+			remoteInfo = Quicktation;
+		};
+		FBBBDA0C29DDB93D0008A5B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBBBD9E929DDB93C0008A5B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBBBD9F029DDB93C0008A5B3;
+			remoteInfo = Quicktation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB9F479329ED3C0300838D62 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		FBBBD9F129DDB93C0008A5B3 /* Quicktation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quicktation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBBBD9F429DDB93C0008A5B3 /* QuicktationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicktationApp.swift; sourceTree = "<group>"; };
+		FBBBD9F829DDB93D0008A5B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FBBBD9FB29DDB93D0008A5B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FBBBDA0129DDB93D0008A5B3 /* QuicktationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuicktationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBBBDA0529DDB93D0008A5B3 /* QuicktationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicktationTests.swift; sourceTree = "<group>"; };
+		FBBBDA0B29DDB93D0008A5B3 /* QuicktationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuicktationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBBBDA0F29DDB93D0008A5B3 /* QuicktationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicktationUITests.swift; sourceTree = "<group>"; };
+		FBBBDA1129DDB93D0008A5B3 /* QuicktationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicktationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FBBBDA2529DDBEB90008A5B3 /* Aromatron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aromatron-Regular.ttf"; sourceTree = "<group>"; };
+		FBBBDA2729DDBECA0008A5B3 /* Aromatron-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aromatron-Regular.otf"; sourceTree = "<group>"; };
+		FBBBDA2829DDBFE90008A5B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FBBBDA2929DDC76E0008A5B3 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		FBBBDA2A29DDE7530008A5B3 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
+		FBBBDA2C29DDE97F0008A5B3 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		FBFD28DD29EF4EBF0097091E /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBBBD9EE29DDB93C0008A5B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBFD28DA29EF44E40097091E /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBBBD9FE29DDB93D0008A5B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBBBDA0829DDB93D0008A5B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB9F479129ED3B4900838D62 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				FB9F479229ED3BF300838D62 /* entity */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		FB9F479229ED3BF300838D62 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				FB9F479329ED3C0300838D62 /* data.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		FBBBD9E829DDB93C0008A5B3 = {
+			isa = PBXGroup;
+			children = (
+				FBBBD9F329DDB93C0008A5B3 /* Quicktation */,
+				FBBBDA0429DDB93D0008A5B3 /* QuicktationTests */,
+				FBBBDA0E29DDB93D0008A5B3 /* QuicktationUITests */,
+				FBBBD9F229DDB93C0008A5B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBBBD9F229DDB93C0008A5B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBBBD9F129DDB93C0008A5B3 /* Quicktation.app */,
+				FBBBDA0129DDB93D0008A5B3 /* QuicktationTests.xctest */,
+				FBBBDA0B29DDB93D0008A5B3 /* QuicktationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBBBD9F329DDB93C0008A5B3 /* Quicktation */ = {
+			isa = PBXGroup;
+			children = (
+				FBBBD9F429DDB93C0008A5B3 /* QuicktationApp.swift */,
+				FBFD28DC29EF491B0097091E /* ui */,
+				FBBBDA2829DDBFE90008A5B3 /* Info.plist */,
+				FBBBD9F829DDB93D0008A5B3 /* Assets.xcassets */,
+				FBBBDA2429DDBEA00008A5B3 /* Fonts */,
+				FBBBD9FA29DDB93D0008A5B3 /* Preview Content */,
+			);
+			path = Quicktation;
+			sourceTree = "<group>";
+		};
+		FBBBD9FA29DDB93D0008A5B3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FBBBD9FB29DDB93D0008A5B3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FBBBDA0429DDB93D0008A5B3 /* QuicktationTests */ = {
+			isa = PBXGroup;
+			children = (
+				FBBBDA0529DDB93D0008A5B3 /* QuicktationTests.swift */,
+			);
+			path = QuicktationTests;
+			sourceTree = "<group>";
+		};
+		FBBBDA0E29DDB93D0008A5B3 /* QuicktationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FBBBDA0F29DDB93D0008A5B3 /* QuicktationUITests.swift */,
+				FBBBDA1129DDB93D0008A5B3 /* QuicktationUITestsLaunchTests.swift */,
+			);
+			path = QuicktationUITests;
+			sourceTree = "<group>";
+		};
+		FBBBDA1E29DDBE4F0008A5B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBFD28DD29EF4EBF0097091E /* MainPage.swift */,
+				FBBBDA2A29DDE7530008A5B3 /* RegisterPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBBBDA2429DDBEA00008A5B3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FBBBDA2C29DDE97F0008A5B3 /* OpenSans-Regular.ttf */,
+				FBBBDA2929DDC76E0008A5B3 /* Nunito-Bold.ttf */,
+				FBBBDA2729DDBECA0008A5B3 /* Aromatron-Regular.otf */,
+				FBBBDA2529DDBEB90008A5B3 /* Aromatron-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FBFD28DB29EF48E30097091E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FBFD28DC29EF491B0097091E /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				FBFD28DB29EF48E30097091E /* ViewModel */,
+				FB9F479129ED3B4900838D62 /* data */,
+				FBBBDA1E29DDBE4F0008A5B3 /* View */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBBBD9F029DDB93C0008A5B3 /* Quicktation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBBBDA1529DDB93D0008A5B3 /* Build configuration list for PBXNativeTarget "Quicktation" */;
+			buildPhases = (
+				FBBBD9ED29DDB93C0008A5B3 /* Sources */,
+				FBBBD9EE29DDB93C0008A5B3 /* Frameworks */,
+				FBBBD9EF29DDB93C0008A5B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quicktation;
+			packageProductDependencies = (
+				FBFD28D929EF44E40097091E /* Alamofire */,
+			);
+			productName = Quicktation;
+			productReference = FBBBD9F129DDB93C0008A5B3 /* Quicktation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FBBBDA0029DDB93D0008A5B3 /* QuicktationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBBBDA1829DDB93D0008A5B3 /* Build configuration list for PBXNativeTarget "QuicktationTests" */;
+			buildPhases = (
+				FBBBD9FD29DDB93D0008A5B3 /* Sources */,
+				FBBBD9FE29DDB93D0008A5B3 /* Frameworks */,
+				FBBBD9FF29DDB93D0008A5B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBBBDA0329DDB93D0008A5B3 /* PBXTargetDependency */,
+			);
+			name = QuicktationTests;
+			productName = QuicktationTests;
+			productReference = FBBBDA0129DDB93D0008A5B3 /* QuicktationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FBBBDA0A29DDB93D0008A5B3 /* QuicktationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBBBDA1B29DDB93D0008A5B3 /* Build configuration list for PBXNativeTarget "QuicktationUITests" */;
+			buildPhases = (
+				FBBBDA0729DDB93D0008A5B3 /* Sources */,
+				FBBBDA0829DDB93D0008A5B3 /* Frameworks */,
+				FBBBDA0929DDB93D0008A5B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBBBDA0D29DDB93D0008A5B3 /* PBXTargetDependency */,
+			);
+			name = QuicktationUITests;
+			productName = QuicktationUITests;
+			productReference = FBBBDA0B29DDB93D0008A5B3 /* QuicktationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBBBD9E929DDB93C0008A5B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					FBBBD9F029DDB93C0008A5B3 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					FBBBDA0029DDB93D0008A5B3 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = FBBBD9F029DDB93C0008A5B3;
+					};
+					FBBBDA0A29DDB93D0008A5B3 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = FBBBD9F029DDB93C0008A5B3;
+					};
+				};
+			};
+			buildConfigurationList = FBBBD9EC29DDB93C0008A5B3 /* Build configuration list for PBXProject "Quicktation" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FBBBD9E829DDB93C0008A5B3;
+			packageReferences = (
+				FBFD28D829EF44E40097091E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = FBBBD9F229DDB93C0008A5B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBBBD9F029DDB93C0008A5B3 /* Quicktation */,
+				FBBBDA0029DDB93D0008A5B3 /* QuicktationTests */,
+				FBBBDA0A29DDB93D0008A5B3 /* QuicktationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBBBD9EF29DDB93C0008A5B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBBBDA2629DDBEB90008A5B3 /* Aromatron-Regular.ttf in Resources */,
+				FBBBD9FC29DDB93D0008A5B3 /* Preview Assets.xcassets in Resources */,
+				FBBBD9F929DDB93D0008A5B3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBBBD9FF29DDB93D0008A5B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBBBDA0929DDB93D0008A5B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBBBD9ED29DDB93C0008A5B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBFD28DE29EF4EBF0097091E /* MainPage.swift in Sources */,
+				FBBBDA2B29DDE7530008A5B3 /* RegisterPage.swift in Sources */,
+				FBBBD9F529DDB93C0008A5B3 /* QuicktationApp.swift in Sources */,
+				FB9F479429ED3C0300838D62 /* data.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBBBD9FD29DDB93D0008A5B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBBBDA0629DDB93D0008A5B3 /* QuicktationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBBBDA0729DDB93D0008A5B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBBBDA1029DDB93D0008A5B3 /* QuicktationUITests.swift in Sources */,
+				FBBBDA1229DDB93D0008A5B3 /* QuicktationUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FBBBDA0329DDB93D0008A5B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBBBD9F029DDB93C0008A5B3 /* Quicktation */;
+			targetProxy = FBBBDA0229DDB93D0008A5B3 /* PBXContainerItemProxy */;
+		};
+		FBBBDA0D29DDB93D0008A5B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBBBD9F029DDB93C0008A5B3 /* Quicktation */;
+			targetProxy = FBBBDA0C29DDB93D0008A5B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FBBBDA1329DDB93D0008A5B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FBBBDA1429DDB93D0008A5B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBBBDA1629DDB93D0008A5B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Quicktation/Preview Content\"";
+				DEVELOPMENT_TEAM = QDK3594QM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Quicktation/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olguhanhu-nerli.Quicktation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FBBBDA1729DDB93D0008A5B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Quicktation/Preview Content\"";
+				DEVELOPMENT_TEAM = QDK3594QM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Quicktation/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olguhanhu-nerli.Quicktation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FBBBDA1929DDB93D0008A5B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QDK3594QM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olguhanhu-nerli.QuicktationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quicktation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Quicktation";
+			};
+			name = Debug;
+		};
+		FBBBDA1A29DDB93D0008A5B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QDK3594QM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olguhanhu-nerli.QuicktationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quicktation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Quicktation";
+			};
+			name = Release;
+		};
+		FBBBDA1C29DDB93D0008A5B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QDK3594QM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olguhanhu-nerli.QuicktationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Quicktation;
+			};
+			name = Debug;
+		};
+		FBBBDA1D29DDB93D0008A5B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QDK3594QM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olguhanhu-nerli.QuicktationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Quicktation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBBBD9EC29DDB93C0008A5B3 /* Build configuration list for PBXProject "Quicktation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBBBDA1329DDB93D0008A5B3 /* Debug */,
+				FBBBDA1429DDB93D0008A5B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBBBDA1529DDB93D0008A5B3 /* Build configuration list for PBXNativeTarget "Quicktation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBBBDA1629DDB93D0008A5B3 /* Debug */,
+				FBBBDA1729DDB93D0008A5B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBBBDA1829DDB93D0008A5B3 /* Build configuration list for PBXNativeTarget "QuicktationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBBBDA1929DDB93D0008A5B3 /* Debug */,
+				FBBBDA1A29DDB93D0008A5B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBBBDA1B29DDB93D0008A5B3 /* Build configuration list for PBXNativeTarget "QuicktationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBBBDA1C29DDB93D0008A5B3 /* Debug */,
+				FBBBDA1D29DDB93D0008A5B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBFD28D829EF44E40097091E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBFD28D929EF44E40097091E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBFD28D829EF44E40097091E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FBBBD9E929DDB93C0008A5B3 /* Project object */;
+}
