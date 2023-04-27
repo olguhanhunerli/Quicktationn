@@ -18,6 +18,7 @@ struct RegisterPage: View {
 
                     VStack {
                         LogoView()
+                            
                             .padding(.top, geometry.size.height * 0.15)
                             .padding(.bottom, geometry.size.height * 0.1)
 

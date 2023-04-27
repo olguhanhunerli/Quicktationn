@@ -11,6 +11,8 @@ struct LoginPage: View {
     @Environment(\.presentationMode) var presentationmode
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var resetPass: Bool = false
+    @State private var registerPageGo: Bool  = false
     var body: some View {
         GeometryReader { geometry in
             NavigationStack{
@@ -29,7 +31,7 @@ struct LoginPage: View {
                             InputPassView(password: $password, title: "Şifre")
                             Spacer()
                         Button(action: {
-                                    self.presentationmode.wrappedValue.dismiss()
+                                    resetPass = true
                         }) {Text("Şifreni mi unuttun?")
                                 .foregroundColor(.yellow)
                                 .underline()
@@ -42,7 +44,7 @@ struct LoginPage: View {
                                 .foregroundColor(.white)
                                 .font(.custom("OpenSans-Regular", size: 15))
                             Button(action: {
-                                        self.presentationmode.wrappedValue.dismiss()
+                                       registerPageGo = true
                             }) {Text("tıkla")
                                     .foregroundColor(.yellow)
                                     .underline()
@@ -52,7 +54,11 @@ struct LoginPage: View {
                         Spacer()
                         LoginButton()
                         Spacer()
-                        }
+                    }.sheet(isPresented: $resetPass){
+                        ResetPassword()
+                    }.sheet(isPresented: $registerPageGo){
+                        RegisterPage()
+                    }
                     }
                 }
             }
