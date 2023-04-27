@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MainPage: View {
     @State private var registerpageGo = false
+    @State private var loginpageGo = false
     var body: some View {
         NavigationStack{
             ZStack {
@@ -28,7 +29,7 @@ struct MainPage: View {
                     
                     
                     Button("Giriş Yap") {
-                        
+                        loginpageGo = true
                         
                     }
                     .frame(width: UIScreen.main.bounds.width * 0.9 ,height:  UIScreen.main.bounds.height * 0.1)
@@ -50,6 +51,8 @@ struct MainPage: View {
                 }
             }.sheet(isPresented: $registerpageGo) {
                 RegisterPage()
+            }.sheet(isPresented: $loginpageGo) {
+                LoginPage()
             }
         }
     }
