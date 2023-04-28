@@ -5,9 +5,11 @@ struct RegisterPage: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var password2: String = ""
+    @ObservedObject var RPviewModel = RegisterViewModel()
     @Environment(\.presentationMode) var presentationmode
 
     var body: some View {
+        
         GeometryReader { geometry in
             NavigationView {
                 ZStack {
@@ -42,7 +44,7 @@ struct RegisterPage: View {
 
                      
 
-                        RegisterButton()
+                        RegisterButton(RPviewModel: RPviewModel ,email: $email , password: $password , nameSurname: $nameSurname )
                             .padding(.top, geometry.size.height * 0.05)
                     }
                 }
@@ -109,9 +111,13 @@ struct RegisterPage: View {
     }
 
     struct RegisterButton: View {
+        @ObservedObject var RPviewModel : RegisterViewModel
+        @Binding var email: String
+        @Binding var password: String
+        @Binding var nameSurname: String
         var body: some View {
             Button("Kayıt Ol") {
-                // Kayıt işlemleri burada yapılacak
+                self.RPviewModel.insert(email: self.email, password: self.password, namesurname: self.nameSurname, username: "")
             }
             .frame(width: UIScreen.main.bounds.width * 0.9, height: UIScreen.main.bounds.height * 0.1)
             .background(Color.white)
