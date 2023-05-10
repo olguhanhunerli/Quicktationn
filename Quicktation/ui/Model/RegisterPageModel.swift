@@ -6,8 +6,10 @@
 //
 
 import Foundation
-class Register : Codable{
-    let name: String
-    let password: String
+
+struct RegisterPageModel: Codable {
     let email: String
+    let password: String
+    let namesurname: String
+    let username: String
 }

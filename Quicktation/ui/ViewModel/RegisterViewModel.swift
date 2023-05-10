@@ -6,29 +6,24 @@
 //
 
 import Foundation
-import Alamofire
 
-class RegisterViewModel : ObservableObject{
-    @Published var name = ""
-       @Published var email = ""
-       @Published var password = ""
-      
-       func register() {
-           let data = RegisterData(name: name, email: email, password: password)
-           let encoder = JSONEncoder()
-           do {
-               let jsonData = try encoder.encode(data)
-               Alamofire.request("https://your-api.com/register", method: .post, parameters: ["data": jsonData], encoding: JSONEncoding.default)
-                   .responseData { (response) in
-                       switch response.result {
-                       case .success(let data):
-                           print(data)
-                       case .failure(let error):
-                           print(error)
-                       }
-               }
-           } catch {
-               print(error)
-           }
-       }
-   }
+class RegisterViewModel: ObservableObject {
+    @Published var userRegistration = RegisterPageModel()
+    private let userRegistrationService = registerService()
+
+    func registerUser(completion: @escaping (String?, String?)-> Void) {
+        userRegistrationService.registerUser(user: userRegistration) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let registerResponse):
+                    if let success = registerResponse.success, success {
+                        completion(registerResponse.errorText, registerResponse.error)}
+                    else {completion(nil, registerResponse.errorText)}
+                case .failure(let error):
+                    completion(nil,"Hata: \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+}
+

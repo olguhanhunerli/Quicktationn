@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class QuicktationService {
-    private let baseUrl: String = "http://63.32.138.61:3000/"
+class QuicktationService: ObservableObject {
+     let baseUrl: String = "http://63.32.138.61:3000/api"
     
 }
