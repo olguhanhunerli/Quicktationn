@@ -10,4 +10,5 @@ import Foundation
 struct RegisterResponse: Codable {
     let error: String
     let errorText: String
+    
 }

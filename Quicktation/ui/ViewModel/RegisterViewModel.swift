@@ -8,7 +8,7 @@
 import Foundation
 
 class RegisterViewModel: ObservableObject {
-    @Published var userRegistration = RegisterPageModel()
+    @Published var userRegistration = RegisterPageModel(email: "", password: "", namesurname: "", username: "")
     private let userRegistrationService = registerService()
 
     func registerUser(completion: @escaping (String?, String?)-> Void) {
@@ -16,14 +16,18 @@ class RegisterViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let registerResponse):
-                    if let success = registerResponse.success, success {
-                        completion(registerResponse.errorText, registerResponse.error)}
-                    else {completion(nil, registerResponse.errorText)}
+                    if registerResponse.error == "0" {
+                        completion(registerResponse.errorText, registerResponse.error)
+                    } else {
+                        completion(nil, registerResponse.errorText)
+                    }
                 case .failure(let error):
-                    completion(nil,"Hata: \(error.localizedDescription)")
+                    completion(nil, "Hata: \(error.localizedDescription)")
                 }
             }
         }
     }
+
+
 }
 

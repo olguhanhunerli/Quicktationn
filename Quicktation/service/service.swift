@@ -27,6 +27,7 @@ class registerService {
                     urlRequest.httpBody = jsonData
 
             AF.request(registerURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseDecodable(of: RegisterResponse.self) { response in
+               
                 switch response.result {
                 case .success(let registerResponse):
                     completion(.success(registerResponse))
@@ -37,9 +38,4 @@ class registerService {
         }
     }
 
-/*let parameters: [String: Any] = [
-    "name": user.namesurname,
-    "email": user.email,
-    "password": user.password,
-    "username": user.username
-]*/
+

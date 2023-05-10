@@ -8,8 +8,8 @@
 import Foundation
 
 struct RegisterPageModel: Codable {
-    let email: String
-    let password: String
-    let namesurname: String
-    let username: String
+    var email: String
+    var password: String
+    var namesurname: String
+    var username: String
 }
