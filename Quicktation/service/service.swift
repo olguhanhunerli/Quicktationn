@@ -27,7 +27,7 @@ class registerService {
                     urlRequest.httpBody = jsonData
 
             AF.request(registerURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseDecodable(of: RegisterResponse.self) { response in
-               
+                print("API Response: \(response)")
                 switch response.result {
                 case .success(let registerResponse):
                     completion(.success(registerResponse))
@@ -37,5 +37,33 @@ class registerService {
             }
         }
     }
-
+class LoginService {
+    let baseURL = QuicktationService().baseUrl
+    
+    func loginUser(user: LoginModel, completion: @escaping (Result<LoginResponse , Error>) ->Void){
+        let loginURL = "\(baseURL)/login"
+        let parameters: [String: Any] = [
+            "email": user.email,
+            "password": user.password
+        ]
+        
+        
+        var urlRequest = URLRequest(url: URL(string: loginURL)!)
+        urlRequest.httpMethod = HTTPMethod.post.rawValue
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: parameters)
+        urlRequest.httpBody = jsonData
+        
+        AF.request(loginURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseDecodable(of: LoginResponse.self) { response in
+            print("API Response: \(response)")
+            switch response.result {
+            case .success(let loginResponse):
+                completion(.success(loginResponse))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+}
 
