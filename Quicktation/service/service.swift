@@ -69,15 +69,18 @@ class LoginService {
 class homePageItems {
     let baseURL = QuicktationService().baseUrl
     
-    func fetchUser(userId: Int) -> AnyPublisher<homePage, AFError> {
+    func fetchUser(userId: Int) -> AnyPublisher<homeResponse, AFError> {
         let loginURL = "\(baseURL)/homepageitems/\(userId)"
         
         var urlRequest = URLRequest(url: URL(string: loginURL)!)
-        urlRequest.httpMethod = HTTPMethod.post.rawValue
+        urlRequest.httpMethod = HTTPMethod.get.rawValue
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        return AF.request(loginURL)
-            .publishDecodable(type: homePage.self)
+        let request = AF.request(loginURL)
+        request.cURLDescription{ description in
+            print (description)
+        }
+           return  request.publishDecodable(type: homeResponse.self)
             .value()
             .eraseToAnyPublisher()
         

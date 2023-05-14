@@ -11,7 +11,7 @@ import SwiftUI
 struct QuicktationApp: App {
     var body: some Scene {
         WindowGroup  {
-            MainPage()
+            HomePageView()
         }
     }
 }

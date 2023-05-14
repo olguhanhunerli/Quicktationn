@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct homeResponse: Codable{
-    let error: String
-    let errorText: String
+struct homeResponse: Decodable{
+    let items: [homePage]
+    let scanIndex: Int
 }

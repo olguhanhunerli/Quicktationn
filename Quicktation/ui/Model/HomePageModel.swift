@@ -7,6 +7,14 @@
 
 import Foundation
 struct homePage: Decodable{
-    var userId: Int
-    var scanIndex: Int
+        var id: Int
+        var quote_text: String
+        var quote_url: String
+        var stat: Int
+        var userId: Int
+        var createDate: String
+        var username: String
+        var userphoto: String?
+        var likeCount: Int
+        var amIlike: Int
 }

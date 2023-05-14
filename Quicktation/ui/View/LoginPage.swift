@@ -64,7 +64,7 @@ struct LoginPage: View {
                                         alertMessage = "Giriş başarılı"
                                         showalert = true
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                            homepageGo = true
+                                            self.homepageGo = true
                                         }
                                     } else {
                                         print("Başarısız")
