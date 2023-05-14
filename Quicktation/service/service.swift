@@ -7,7 +7,7 @@
 
 import Foundation
 import Alamofire
-
+import Combine
 class registerService {
     let baseURL = QuicktationService().baseUrl
 
@@ -66,4 +66,20 @@ class LoginService {
         }
     }
 }
-
+class homePageItems {
+    let baseURL = QuicktationService().baseUrl
+    
+    func fetchUser(userId: Int) -> AnyPublisher<homePage, AFError> {
+        let loginURL = "\(baseURL)/homepageitems/\(userId)"
+        
+        var urlRequest = URLRequest(url: URL(string: loginURL)!)
+        urlRequest.httpMethod = HTTPMethod.post.rawValue
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        return AF.request(loginURL)
+            .publishDecodable(type: homePage.self)
+            .value()
+            .eraseToAnyPublisher()
+        
+    }
+}
