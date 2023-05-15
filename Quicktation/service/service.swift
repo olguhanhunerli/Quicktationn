@@ -66,23 +66,21 @@ class LoginService {
         }
     }
 }
-class homePageItems {
+class homePageService {
     let baseURL = QuicktationService().baseUrl
-    
-    func fetchUser(userId: Int) -> AnyPublisher<homeResponse, AFError> {
-        let loginURL = "\(baseURL)/homepageitems/\(userId)"
-        
-        var urlRequest = URLRequest(url: URL(string: loginURL)!)
-        urlRequest.httpMethod = HTTPMethod.get.rawValue
+    func homePage(completion: @escaping (Result<homepageData, Error>) -> Void) {
+        let homePageURL = "\(baseURL)/homepageitems"
+        var urlRequest = URLRequest(url: URL(string: homePageURL)!)
+        urlRequest.httpMethod = HTTPMethod.post.rawValue
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let request = AF.request(loginURL)
-        request.cURLDescription{ description in
-            print (description)
+        AF.request("https://yourapiurl.com/path").responseDecodable { (response: DataResponse<homePage, AFError>) in
+            switch response.result {
+            case .success(let data):
+                completion(.success(data.response))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
-           return  request.publishDecodable(type: homeResponse.self)
-            .value()
-            .eraseToAnyPublisher()
-        
     }
 }

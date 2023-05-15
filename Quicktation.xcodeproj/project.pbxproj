@@ -10,6 +10,8 @@
 		FB3A9DA32A0C5C4A00063974 /* LoginPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3A9DA22A0C5C4A00063974 /* LoginPageModel.swift */; };
 		FB3A9DA52A0C5C5600063974 /* LoginPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3A9DA42A0C5C5600063974 /* LoginPageResponse.swift */; };
 		FB3A9DA72A0C5CE000063974 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3A9DA62A0C5CE000063974 /* LoginViewModel.swift */; };
+		FB5D894A2A12C9D800779849 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5D89492A12C9D800779849 /* AVFoundation.framework */; };
+		FB5D894C2A12C9F800779849 /* Deneme View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5D894B2A12C9F800779849 /* Deneme View.swift */; };
 		FB64A0C629FA821100367263 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64A0C529FA821100367263 /* LoginPage.swift */; };
 		FB79626C29FAFFE400B30364 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79626B29FAFFE400B30364 /* ResetPassword.swift */; };
 		FB83EB0229FBCC980064A4D4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83EB0129FBCC980064A4D4 /* RegisterViewModel.swift */; };
@@ -54,6 +56,8 @@
 		FB3A9DA22A0C5C4A00063974 /* LoginPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageModel.swift; sourceTree = "<group>"; };
 		FB3A9DA42A0C5C5600063974 /* LoginPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageResponse.swift; sourceTree = "<group>"; };
 		FB3A9DA62A0C5CE000063974 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FB5D89492A12C9D800779849 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FB5D894B2A12C9F800779849 /* Deneme View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deneme View.swift"; sourceTree = "<group>"; };
 		FB64A0C529FA821100367263 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		FB79626B29FAFFE400B30364 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		FB83EB0129FBCC980064A4D4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB5D894A2A12C9D800779849 /* AVFoundation.framework in Frameworks */,
 				FBFD28DA29EF44E40097091E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB5D89482A12C9D800779849 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB5D89492A12C9D800779849 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB83EB0529FBECD90064A4D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,7 @@
 				FBBBDA0429DDB93D0008A5B3 /* QuicktationTests */,
 				FBBBDA0E29DDB93D0008A5B3 /* QuicktationUITests */,
 				FBBBD9F229DDB93C0008A5B3 /* Products */,
+				FB5D89482A12C9D800779849 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +217,7 @@
 			children = (
 				FBFD28DD29EF4EBF0097091E /* MainPage.swift */,
 				FBBC80DE2A0D249A00D2C4A3 /* HomePageView.swift */,
+				FB5D894B2A12C9F800779849 /* Deneme View.swift */,
 				FB79626B29FAFFE400B30364 /* ResetPassword.swift */,
 				FB64A0C529FA821100367263 /* LoginPage.swift */,
 				FBBBDA2A29DDE7530008A5B3 /* RegisterPage.swift */,
@@ -387,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB79626C29FAFFE400B30364 /* ResetPassword.swift in Sources */,
+				FB5D894C2A12C9F800779849 /* Deneme View.swift in Sources */,
 				FBBC80E52A0D3AD400D2C4A3 /* HomePageViewModel.swift in Sources */,
 				FBFD28DE29EF4EBF0097091E /* MainPage.swift in Sources */,
 				FB83EB0229FBCC980064A4D4 /* RegisterViewModel.swift in Sources */,

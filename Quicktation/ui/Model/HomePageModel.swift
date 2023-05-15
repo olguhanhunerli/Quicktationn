@@ -6,15 +6,21 @@
 //
 
 import Foundation
-struct homePage: Decodable{
-        var id: Int
-        var quote_text: String
-        var quote_url: String
-        var stat: Int
-        var userId: Int
-        var createDate: String
-        var username: String
-        var userphoto: String?
-        var likeCount: Int
-        var amIlike: Int
+
+struct homepageData: Codable {
+    let quotations: [homePagee]
+    let scanIndex: Int
+}
+
+struct homePagee: Codable, Identifiable {
+    let id: Int
+    let quote_text: String
+    let quote_url: String
+    let stat: Int
+    let userId: Int
+    let createDate: String
+    let username: String
+    let userphoto: String?
+    let likeCount: Int
+    let amIlike: Int
 }
