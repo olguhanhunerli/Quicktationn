@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class HomePageViewModel: ObservableObject {
+/*class HomePageViewModel: ObservableObject {
         @Published var quotations = [homePagee]()
         private var apiService = homePageService()
 
@@ -28,5 +28,29 @@ class HomePageViewModel: ObservableObject {
                 }
             }
         }
-    }
+    }*/
+class HomePageViewModel: ObservableObject {
+    @Published var mainList = [homePage2]() // assuming HomePage2 is your Quotation model
+        @Published var scanIndex = 0
+        @Published var errorMessage = ""
+
+        private var repository = HomePageRepository()
+
+        func loadMains(userid: Int) {
+            repository.postMainApi(userid: userid) { [weak self] result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let data):
+                        print("Data \(data)")
+                        self?.mainList = data.response.quotations
+                       
+                        self?.scanIndex = data.response.scanIndex
+                        self?.errorMessage = ""
+                    case .failure(let error):
+                        self?.errorMessage = error
+                    }
+                }
+            }
+        }
+}
 

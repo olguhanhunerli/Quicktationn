@@ -8,9 +8,13 @@
 import Foundation
 import Alamofire
 import Combine
+let baseURL = QuicktationService().baseUrl
+enum Resource<T> {
+    case success(T)
+    case failure(String)
+}
 class registerService {
-    let baseURL = QuicktationService().baseUrl
-
+    
         func registerUser(user: RegisterPageModel, completion: @escaping (Result<RegisterResponse, Error>) -> Void) {
             let registerURL = "\(baseURL)/register"
             let parameters: [String: Any] = [
@@ -38,7 +42,6 @@ class registerService {
         }
     }
 class LoginService {
-    let baseURL = QuicktationService().baseUrl
     
     func loginUser(user: LoginModel, completion: @escaping (Result<LoginResponse , Error>) ->Void){
         let loginURL = "\(baseURL)/login"
@@ -67,20 +70,23 @@ class LoginService {
     }
 }
 class homePageService {
-    let baseURL = QuicktationService().baseUrl
-    func homePage(completion: @escaping (Result<homepageData, Error>) -> Void) {
-        let homePageURL = "\(baseURL)/homepageitems"
-        var urlRequest = URLRequest(url: URL(string: homePageURL)!)
-        urlRequest.httpMethod = HTTPMethod.post.rawValue
-        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        AF.request("https://yourapiurl.com/path").responseDecodable { (response: DataResponse<homePage, AFError>) in
-            switch response.result {
-            case .success(let data):
-                completion(.success(data.response))
-            case .failure(let error):
-                completion(.failure(error))
-            }
+    func postMainApi(userid: Int, scanIndex: Int, completion: @escaping (Result<homePageResponse2, Error>) -> Void) {
+            let url = "\(baseURL)/homepageitems"
+            let parameters: Parameters = ["userId": userid, "scanIndex": scanIndex]
+            let headers: HTTPHeaders = ["Content-Type":"application/json"]
+
+            AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+                .responseDecodable(of: homePageResponse2.self) { response in
+                    
+                    switch response.result {
+                    case .success(let data):
+                        completion(.success(data))
+                    case .failure(let error):
+                        
+                        completion(.failure(error))
+                    }
+                }
         }
     }
-}
+
+    

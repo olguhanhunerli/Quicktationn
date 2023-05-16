@@ -6,12 +6,12 @@ struct HomePageView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack{
-               /* searchBar(searchText: $searchText)*/
+                /* searchBar(searchText: $searchText)*/
                 Spacer()
                 TabView{
                     
-                        
-                    homeView(searchText: $searchText)
+                    
+                    homeView(searchText: $searchText, viewModel: self.viewModel)
                         .tabItem{
                             Image("iconHome.png")
                         }
@@ -38,27 +38,35 @@ struct HomePageView: View {
                 
             }
         }
-            }
-        }
+    }
+}
 
 
 struct CircleView: View {
+    var imageURL: String
+    
     var body: some View {
         ZStack {
             Circle()
                 .fill(Color.blue)
                 .frame(width: 44, height: 44)
             
-            Image("image")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 44, height: 44)
+            AsyncImage(url: URL(string: imageURL)) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 44, height: 44)
         }
     }
 }
 
 
+
+
 struct textView: View {
+    var quote: homePage2
     var body: some View{
         GeometryReader { geometry in
             ZStack{
@@ -74,23 +82,24 @@ struct textView: View {
                     .border(Color.black.opacity(0))
                 
                 
-                Text("#Hayat bizi resmen dört işlemle sınar; Gerçeklerle çarpar, ayrılıklarla böler,    #insanlık tan çıkarır vesonunda topla kendini der.#Hayat bizi resmen dört işlemle   sınar; Gerçeklerle çarpar, ayrılıklarla böler, #insanlık tan çıkarır ve sonunda topla kendini der")
-                    .font(.custom("OpenSans-Regular", size: 12))
-                    .multilineTextAlignment(.leading)
-                    .foregroundColor(.white)
-                Text("550 beğenme")
-                    .font(.custom("OpenSans-Regular", size: 12))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
-                    .padding(.bottom, 100)
-                    .padding(.leading, 249)
-                
-                Text("-muhtesemozgur9")
-                    .font(.custom("OpenSans-Regular", size: 12))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
-                    .padding(.top, 100)
-                    .padding(.horizontal, -160)
+                Text(quote.quote_text)
+                                    .font(.custom("OpenSans-Regular", size: 12))
+                                    .multilineTextAlignment(.leading)
+                                    .foregroundColor(.white)
+                                
+                                Text("\(quote.likeCount) beğenme")
+                                    .font(.custom("OpenSans-Regular", size: 12))
+                                    .multilineTextAlignment(.center)
+                                    .foregroundColor(.white)
+                                    .padding(.bottom, 100)
+                                    .padding(.leading, 249)
+                                
+                                Text("-\(quote.username)")
+                                    .font(.custom("OpenSans-Regular", size: 12))
+                                    .multilineTextAlignment(.center)
+                                    .foregroundColor(.white)
+                                    .padding(.top, 100)
+                                    .padding(.horizontal, -160)
                 Button (action: {}) {
                     Image("paylas")
                 }
@@ -107,10 +116,10 @@ struct textView: View {
                 .padding(.top, 90)
                 .padding(.leading, 270)
             }
-                
-                CircleView()
-                    .offset(x: geometry.size.width/2 - 170, y: geometry.size.height/2 - 85) // Offset değerini kullanarak CircleView'ı konumlandırın
-                
+            if let userPhoto = quote.userphoto{
+                CircleView(imageURL: userPhoto)
+                    .offset(x: geometry.size.width/2 - 170, y: geometry.size.height/2 - 85)
+            }
             }.frame(width: 329, height: 126)
                 .padding(20)
         }
@@ -142,22 +151,29 @@ struct searchBar: View {
     }
 struct homeView : View{
     @Binding var searchText: String
-    var body: some View {
+    @ObservedObject var viewModel: HomePageViewModel
+    
+   var body: some View {
+   
         ZStack {
+            searchBar(searchText: $searchText)
+                .padding(.top, 25)
             ScrollView{
                 VStack {
-                    searchBar(searchText: $searchText)
-                        .padding(.top, 25) // search bar'ın üst tarafına padding ekler.
+                   
                         
                     Spacer()
-                   textView()
-                        
-                        .padding(.top , 30)
-                }
-            }.background(imageView())
-        }
-    }
-}
+                    ForEach(viewModel.mainList) { quote in
+                                            textView(quote: quote)
+                                                .padding(.top , 30)
+                                        }
+                                    }
+                                }.background(imageView())
+                            }.onAppear {
+                                viewModel.loadMains(userid: 52)
+                            }
+                        }
+                    }
 struct imageView: View{
     var body: some View{
         Image("homepage.png")
