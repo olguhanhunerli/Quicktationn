@@ -4,6 +4,7 @@ struct HomePageView: View {
     @State private var searchText: String = ""
     @ObservedObject var viewModel = HomePageViewModel()
     var body: some View {
+        
         GeometryReader { geometry in
             ZStack{
                 /* searchBar(searchText: $searchText)*/
@@ -154,7 +155,7 @@ struct homeView : View{
     @ObservedObject var viewModel: HomePageViewModel
     
    var body: some View {
-   
+      
         ZStack {
             searchBar(searchText: $searchText)
                 .padding(.top, 25)
@@ -170,7 +171,7 @@ struct homeView : View{
                                     }
                                 }.background(imageView())
                             }.onAppear {
-                                viewModel.loadMains(userid: 52)
+                                viewModel.loadMains(userid: -1)
                             }
                         }
                     }

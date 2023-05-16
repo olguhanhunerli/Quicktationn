@@ -35,6 +35,9 @@ class HomePageViewModel: ObservableObject {
         @Published var errorMessage = ""
 
         private var repository = HomePageRepository()
+    init(){
+        loadMains(userid: -1)
+    }
 
         func loadMains(userid: Int) {
             repository.postMainApi(userid: userid) { [weak self] result in
