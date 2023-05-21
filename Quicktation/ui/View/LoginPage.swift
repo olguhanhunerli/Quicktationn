@@ -17,6 +17,7 @@ struct LoginPage: View {
     @State private var alertMessage: String = ""
     @State private var alertTitle: String = ""
     @State private var homepageGo: Bool = false
+    ///@State private var userId1: String = ""
     @ObservedObject var loginViewModel = LoginViewModel()
     var body: some View {
                 GeometryReader { geometry in

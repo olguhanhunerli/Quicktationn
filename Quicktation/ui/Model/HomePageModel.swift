@@ -10,6 +10,4 @@ import Foundation
 struct homepageData: Codable {
     let userId: Int
     let scanIndex: Int
-    
- 
 }

@@ -75,14 +75,15 @@ class homePageService {
             let parameters: Parameters = ["userId": userid, "scanIndex": scanIndex]
             let headers: HTTPHeaders = ["Content-Type":"application/json"]
 
-            AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+            AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers )
                 .responseDecodable(of: homePageResponse2.self) { response in
-                    
+                    print("data \(response)")
                     switch response.result {
                     case .success(let data):
+                        
                         completion(.success(data))
                     case .failure(let error):
-                        
+                        print("Error: \(error.localizedDescription)")
                         completion(.failure(error))
                     }
                 }

@@ -17,11 +17,13 @@ class HomePageRepository {
                 case "0":
                     completion(.success(response))
                 case "1":
-                    completion(.failure(response.errorText ?? ""))
+                    completion(.failure(response.errorText))
+                    print("error \(response)")
                 default:
                     completion(.failure("Beklenmeyen bir hata oluştu."))
                 }
             case .failure(let error):
+                print("Error in Repository: \(error.localizedDescription)")
                 completion(.failure(error.localizedDescription))
             }
         }

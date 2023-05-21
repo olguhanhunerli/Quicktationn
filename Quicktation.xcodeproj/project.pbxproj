@@ -18,6 +18,8 @@
 		FB79626C29FAFFE400B30364 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB79626B29FAFFE400B30364 /* ResetPassword.swift */; };
 		FB83EB0229FBCC980064A4D4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83EB0129FBCC980064A4D4 /* RegisterViewModel.swift */; };
 		FB83EB0729FBECF00064A4D4 /* RegisterPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83EB0629FBECF00064A4D4 /* RegisterPageModel.swift */; };
+		FB8722BF2A14702200994ED1 /* MyProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8722BE2A14702200994ED1 /* MyProfileModel.swift */; };
+		FB8722C12A14711D00994ED1 /* MyProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8722C02A14711D00994ED1 /* MyProfileResponse.swift */; };
 		FB9F479429ED3C0300838D62 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F479329ED3C0300838D62 /* data.swift */; };
 		FBBBD9F529DDB93C0008A5B3 /* QuicktationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBD9F429DDB93C0008A5B3 /* QuicktationApp.swift */; };
 		FBBBD9F929DDB93D0008A5B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBBD9F829DDB93D0008A5B3 /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		FB79626B29FAFFE400B30364 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		FB83EB0129FBCC980064A4D4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		FB83EB0629FBECF00064A4D4 /* RegisterPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageModel.swift; sourceTree = "<group>"; };
+		FB8722BE2A14702200994ED1 /* MyProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileModel.swift; sourceTree = "<group>"; };
+		FB8722C02A14711D00994ED1 /* MyProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileResponse.swift; sourceTree = "<group>"; };
 		FB9F479329ED3C0300838D62 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		FBBBD9F129DDB93C0008A5B3 /* Quicktation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quicktation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBBD9F429DDB93C0008A5B3 /* QuicktationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuicktationApp.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				FB5D89502A130E6A00779849 /* LikeQuoteModel.swift */,
+				FB8722BE2A14702200994ED1 /* MyProfileModel.swift */,
+				FB8722C02A14711D00994ED1 /* MyProfileResponse.swift */,
 				FB5D89522A130E9D00779849 /* LikeQuoteResponse.swift */,
 				FBBC80E02A0D38B300D2C4A3 /* HomePageModel.swift */,
 				FBBC80E22A0D395800D2C4A3 /* HomePageResponse.swift */,
@@ -423,6 +429,7 @@
 				FBFB28402A0C0DAE008603A1 /* RegisterResponse.swift in Sources */,
 				FBBBDA2B29DDE7530008A5B3 /* RegisterPage.swift in Sources */,
 				FBBC80E32A0D395800D2C4A3 /* HomePageResponse.swift in Sources */,
+				FB8722C12A14711D00994ED1 /* MyProfileResponse.swift in Sources */,
 				FBBBD9F529DDB93C0008A5B3 /* QuicktationApp.swift in Sources */,
 				FB83EB0729FBECF00064A4D4 /* RegisterPageModel.swift in Sources */,
 				FB5D894F2A12FCD100779849 /* quicktationRepository.swift in Sources */,
@@ -430,6 +437,7 @@
 				FB3A9DA72A0C5CE000063974 /* LoginViewModel.swift in Sources */,
 				FB5D89512A130E6A00779849 /* LikeQuoteModel.swift in Sources */,
 				FB64A0C629FA821100367263 /* LoginPage.swift in Sources */,
+				FB8722BF2A14702200994ED1 /* MyProfileModel.swift in Sources */,
 				FB9F479429ED3C0300838D62 /* data.swift in Sources */,
 				FB5D89532A130E9D00779849 /* LikeQuoteResponse.swift in Sources */,
 				FBFB283E2A0C02D7008603A1 /* service.swift in Sources */,

@@ -9,6 +9,7 @@ import Foundation
 
 class LoginViewModel: ObservableObject{
     @Published var login = LoginModel(email: "", password: "")
+    //@Published var userId1: String = ""
     private let loginService = LoginService()
     
     func loginUser(completion: @escaping (String?, String?)-> Void) {
